@@ -16,9 +16,9 @@ public class Solution3 {
     }
 
     public static void main(String[] args) {
-        Solution3 sol = new Solution3();
+        Solution3 s = new Solution3();
 
-        System.out.println(sol.solution("ProgrammerS123", 11));
-        System.out.println(sol.solution("He110W0r1d", 5));
+        System.out.println(s.solution("ProgrammerS123", 11));
+        System.out.println(s.solution("He110W0r1d", 5));
     }
 }
