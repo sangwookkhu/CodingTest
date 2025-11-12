@@ -7,29 +7,31 @@ import java.util.Scanner;
 
 public class S2444 {
     public static void main(String[] args) {
-        int maxStars = 9;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
 
-        for (int i = 1; i <= maxStars; i += 2) {
-            printStars(i);
+        for (int i = 1; i <= 2 * n - 1; i += 2) {
+            printStars(i, n);
         }
 
-        // 감소하는 부분 (7개부터 1개까지)
-        for (int i = maxStars - 2; i >= 1; i -= 2) {
-            printStars(i);
+        for (int i = 2 * n - 3; i >= 1; i -= 2) {
+            printStars(i, n);
         }
+
+        sc.close();
     }
 
-    private static void printStars(int count) {
-        // 공백 출력
-        int spaces = (9 - count) / 2;
+    private static void printStars(int count, int n) {
+        int spaces = (2 * n - 1 - count) / 2;
         for (int j = 0; j < spaces; j++) {
             System.out.print(" ");
         }
 
-        // 별 출력
         for (int j = 0; j < count; j++) {
             System.out.print("*");
         }
         System.out.println();
     }
 }
+
+// 메모리: 23588KB, 시간: 460ms
